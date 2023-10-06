@@ -1,0 +1,91 @@
+<!-- 
+Using HTML, Bootstrap, and JavaScript create a single page website that contains the following:
+A Bootstrap styled table representing your choice of data.
+A Bootstrap styled form that allows a user to add a new row to the table when clicking on submit.  -->
+
+<!DOCTYPE htl>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css"
+<body>
+<!--Navbar-->
+<nav class="navbar bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="image/Logo.png" alt="logo" width="250">
+     
+      </a>
+    </div>
+  </nav>
+
+<!--Backgroung-->
+<style>
+    body {
+        background-color: lightgrey; 
+    }
+</style>
+  
+<!--Table-->
+<h1>Here is the total website price for a small, medium or large site:</h1>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Small</th>
+        <th scope="col">Medium</th>
+        <th scope="col">Large</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>$3100-$6000</td>
+        <td>$6550-$15300</td>
+        <td>$15350-$25500</td>
+      </tr>
+    
+    </tbody>
+  </table>
+
+
+<!--Form-->
+<div class="container mt-5">
+    <h1>Could you please provide us with your contact information</h1>
+
+    <form id="add-row-form" class="mb-4">
+        <div class="mb-3">
+            <label for="name" class="form-label">Name:</label>
+            <input type="text" class="form-control" id="name" required>
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email:</label>
+            <input type="email" class="form-control" id="email" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+    <!-- Bootstrap-styled table -->
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody id="table-body">
+            <!-- Table rows will be added here dynamically using JavaScript -->
+        </tbody>
+    </table>
+</div>
+
+    
+
+    <script src="node_modules/bootstrap/dist/css/bootstrap.css"></script>
+    <script src="index.js"></script>
+</body>
+</html>
