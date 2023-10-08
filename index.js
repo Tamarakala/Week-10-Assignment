@@ -1,3 +1,9 @@
+
+// This JS code is event listener that refers to DOM event and initializes a form sumbission guide for a web page. 
+// It allows users to add rows to an HTML table. 
+
+
+
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("add-row-form");
     const tbody = document.getElementById("table-body");
@@ -17,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
-        // Create a new table row
+     
         const newRow = document.createElement("tr");
         newRow.innerHTML = `
             <td>${rowId}</td>
@@ -25,14 +31,14 @@ document.addEventListener("DOMContentLoaded", function () {
             <td>${email}</td>
         `;
 
-        // Append the new row to the table body
+      
         tbody.appendChild(newRow);
 
-        // Clear the form inputs
+   
         nameInput.value = "";
         emailInput.value = "";
 
-        // Increment the row ID for the next row
+
         rowId++;
     });
 });
